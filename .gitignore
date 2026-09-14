@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+.deps/
+.codex_tmp/
+
+# Local configuration and working notes
+.env
+task_plan.md
+notes.md
+
+# Generated reports
+reports/**
+!reports/.gitkeep
+
+# Private knowledge: keep only the public directory skeleton and instructions
+knowledge-base/**
+!knowledge-base/README.md
+!knowledge-base/准则/
+!knowledge-base/准则/.gitkeep
+!knowledge-base/评估报告/
+!knowledge-base/评估报告/.gitkeep
+!knowledge-base/评估说明/
+!knowledge-base/评估说明/.gitkeep
+!knowledge-base/公司档案/
+!knowledge-base/公司档案/.gitkeep
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

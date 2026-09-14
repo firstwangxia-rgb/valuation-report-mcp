@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "valuation-report-mcp"
+version = "0.1.0"
+description = "A local-first MCP server for drafting and reviewing Chinese enterprise valuation reports."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "firstwangxia-rgb" }
+]
+keywords = ["mcp", "valuation", "asset-valuation", "knowledge-base", "codex"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Office/Business :: Financial",
+]
+dependencies = [
+  "mcp[cli]>=2,<3",
+  "pydantic>=2.10,<3",
+  "pypdf>=5,<7",
+  "python-docx>=1.1,<2",
+]
+
+[project.urls]
+Homepage = "https://github.com/firstwangxia-rgb/valuation-report-mcp"
+Repository = "https://github.com/firstwangxia-rgb/valuation-report-mcp"
+Issues = "https://github.com/firstwangxia-rgb/valuation-report-mcp/issues"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8,<9",
+  "pytest-cov>=6,<8",
+  "ruff>=0.11,<1",
+]
+
+[project.scripts]
+valuation-report-mcp = "valuation_report_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/valuation_report_mcp"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = [".deps", ".venv", ".codex_tmp"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

@@ -1,0 +1,18 @@
+{
+  "company_name": "示例科技有限公司",
+  "information_date": "2026-09-07",
+  "industry": "智能制造",
+  "business_description": "示例公司信息，仅用于展示结构化输入格式。",
+  "financial_performance": "2025年度营业收入等数据待从经审计年报核验。",
+  "industry_comparison": "可比公司和口径待资产评估师确认。",
+  "notes": [
+    "示例数据不得用于正式评估。"
+  ],
+  "sources": [
+    {
+      "title": "示例公司官方网站",
+      "url": "https://example.com/"
+    }
+  ],
+  "overwrite": false
+}
